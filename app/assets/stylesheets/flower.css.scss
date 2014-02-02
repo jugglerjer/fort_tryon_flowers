@@ -1,0 +1,10 @@
+@import 'mixins';
+
+.flower {
+	opacity: 0;
+	@include animated(0.2s);
+
+	&.visible {
+		opacity: 1;
+	}
+}

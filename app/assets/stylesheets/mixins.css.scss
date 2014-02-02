@@ -1,0 +1,26 @@
+/*********************/
+/* Element Animation */
+/*********************/
+
+@mixin animated ($duration: 0.4s, $delay: 0s) {
+/* Animate changes in format */
+  transition-property: all;
+  transition-duration: $duration;
+  transition-timing-function: ease-in-out;
+  transition-delay: $delay;
+/* Firefox 4 */
+  -moz-transition-property:all;
+  -moz-transition-duration:$duration;
+  -moz-transition-timing-function:ease-in-out;
+  -moz-transition-delay:$delay;
+/* Safari and Chrome */
+  -webkit-transition-property:all;
+  -webkit-transition-duration:$duration;
+  -webkit-transition-timing-function:ease-in-out;
+  -webkit-transition-delay:$delay;
+/* Opera */
+  -o-transition-property:all;
+  -o-transition-duration:$duration;
+  -o-transition-timing-function:ease-in-out;
+  -o-transition-delay:$delay;
+}

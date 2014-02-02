@@ -1,0 +1,15 @@
+<% number_of_flowers_in_row = 13 %>
+
+<% @flowers.each_with_index do |flower, index| %>
+
+	<% if index % number_of_flowers_in_row == 0 %>
+		<div class='row'>
+	<% end %>
+
+			<%= render partial: "flowers/flower_thumbnail", locals: {flower: flower} %>
+
+	<% if index % number_of_flowers_in_row == 12 %>
+		</div>
+	<% end %>
+
+<% end %>
